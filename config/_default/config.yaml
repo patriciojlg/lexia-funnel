@@ -1,2 +1,26 @@
+baseURL: "/lexia-flow/"
+languageCode: "en-us"
+title: "Lexia Flow"
+relativeURLs: true
+
 permalinks:
   landing: "/:slug/"
+
+module:
+  mounts:
+    - source: assets
+      target: assets
+    - source: static
+      target: static
+
+minify:
+  disableXML: true
+  disableHTML: true
+  disableCSS: true
+  disableJS: true
+
+outputs:
+  home: [HTML, RSS, JSON]
+  section: [HTML, RSS]
+  taxonomy: [HTML, RSS]
+  term: [HTML, RSS]
