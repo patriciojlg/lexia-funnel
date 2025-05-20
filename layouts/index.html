@@ -92,137 +92,51 @@
     </div>
   </div>
 </section>
+
+<!-- servicios section -->
 <section class="bg-white dark:bg-gray-900">
-  <div class="items-center max-w-screen-xl gap-8 px-4 py-8 mx-auto lg:grid lg:grid-cols-2 xl:gap-16 sm:py-16 lg:px-6 ">
-    <img class="w-full mb-4 rounded-lg lg:mb-0"
-      src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/features/feature-office-long.png" alt="feature image">
-    <div class="text-gray-500 dark:text-gray-400 sm:text-lg">
-      <h2 class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">
-        Legal, para cualquier persona
-      </h2>
-      <p class="mb-8 font-light lg:text-xl">
-        No deberías necesitar un abogado para entender tus trámites. En Lexia te guiamos paso a paso, de forma clara y
-        segura.
-      </p>
-
-      <div class="py-8 mb-6 border-t border-b border-gray-200 dark:border-gray-700">
-        <div class="flex">
-          <div
-            class="flex items-center justify-center w-8 h-8 mr-4 rounded-full bg-primary-100 dark:bg-primary-900 shrink-0">
-            <!-- Icono -->
-            <svg class="w-5 h-5 text-primary-600 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd"
-                d="M6 2a1 1 0 00-1 1v2h10V3a1 1 0 00-1-1H6zM5 7a1 1 0 000 2h10a1 1 0 100-2H5zm0 4a1 1 0 000 2h10a1 1 0 100-2H5z"
-                clip-rule="evenodd"></path>
-            </svg>
-          </div>
-          <div>
-            <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">1. Elige el trámite o demanda que
-              harás</h3>
-            <p class="mb-2 font-light text-gray-500 dark:text-gray-400">
-              Tú eliges el trámite, nosotros hacemos el resto.
-            </p>
-          </div>
+    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+        <div class="mx-auto max-w-screen-sm text-center lg:mb-16 mb-8">
+            <h2 class="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Nuestros Servicios</h2>
+            <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">Soluciones legales automatizadas para tus necesidades</p>
+        </div> 
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {{ range where .Site.RegularPages "Section" "servicios" }}
+            <article class="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+                <div class="flex justify-between items-center mb-5 text-gray-500">
+                    <span class="bg-primary-100 text-primary-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800">
+                        <svg class="mr-1 w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z" clip-rule="evenodd"></path>
+                        </svg>
+                        Legal
+                    </span>
+                </div>
+                <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    <a href="{{.Permalink}}">{{.Title}}</a>
+                </h2>
+                <p class="mb-5 font-light text-gray-500 dark:text-gray-400">
+                    {{ if .Params.hero.PunchLine }}
+                        {{.Params.hero.PunchLine}}
+                    {{ else }}
+                        Servicio legal automatizado
+                    {{ end }}
+                </p>
+                <div class="flex justify-between items-center">
+                    <a href="{{.Permalink}}" class="inline-flex items-center font-medium text-primary-600 dark:text-primary-500 hover:underline">
+                        Ver más
+                        <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+            {{ end }}
         </div>
-
-        <div class="flex pt-8">
-          <div
-            class="flex items-center justify-center w-8 h-8 mr-4 bg-purple-100 rounded-full dark:bg-purple-900 shrink-0">
-            <!-- Icono -->
-            <svg class="w-5 h-5 text-purple-600 dark:text-purple-300" fill="currentColor" viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd"
-                d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11V5a1 1 0 00-2 0v2H7a1 1 0 000 2h2v2a1 1 0 002 0v-2h2a1 1 0 000-2h-2z"
-                clip-rule="evenodd"></path>
-            </svg>
-          </div>
-          <div>
-            <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">2. Nosotros nos encargamos</h3>
-            <p class="mb-2 font-light text-gray-500 dark:text-gray-400">
-              Llevamos el trámite por ti y puedes ver el avance en cualquier momento.
-            </p>
-          </div>
-        </div>
-
-        <div class="flex pt-8">
-          <div class="flex items-center justify-center w-8 h-8 mr-4 bg-teal-100 rounded-full dark:bg-teal-900 shrink-0">
-            <!-- Icono -->
-            <svg class="w-5 h-5 text-teal-600 dark:text-teal-300" fill="currentColor" viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 00-1.414 0L9 11.586 5.707 8.293a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l7-7a1 1 0 000-1.414z"
-                clip-rule="evenodd"></path>
-            </svg>
-          </div>
-          <div>
-            <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">3. Resultados reales</h3>
-            <p class="mb-2 font-light text-gray-500 dark:text-gray-400">
-              Vamos directo al resultado, sin rodeos ni promesas vacías.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <p class="text-sm">
-        Automatizamos lo difícil, sin perder el toque humano. Cada vez más simple y transparente.
-      </p>
-
     </div>
 </section>
-<section class="bg-white dark:bg-gray-900">
-  <div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-16 lg:px-6 ">
-    <div class="max-w-screen-sm mx-auto mb-8 text-center lg:mb-16">
-      <h2 class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">Integrados con lo más
-        importante</h2>
-      <p class="font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">Lexia se conecta con las fuentes más
-        importantes para automatizar documentos y seguimientos.</p>
-    </div>
-    <div class="py-4 bg-white sm:py-4">
-      <div class="px-6 mx-auto max-w-7xl lg:px-8">
-        <div class="-mx-6 grid grid-cols-2 gap-0.5 overflow-hidden sm:mx-0 sm:rounded-2xl md:grid-cols-3">
-          <div class="p-8 bg-gray-400/5 sm:p-10">
-            <img class="object-contain w-full max-h-12"
-              src="https://tailwindcss.com/plus-assets/img/logos/158x48/transistor-logo-gray-900.svg" alt="Transistor"
-              width="158" height="48">
-          </div>
-          <div class="p-6 bg-gray-400/5 sm:p-10">
-            <img class="object-contain w-full max-h-12"
-              src="https://tailwindcss.com/plus-assets/img/logos/158x48/reform-logo-gray-900.svg" alt="Reform"
-              width="158" height="48">
-          </div>
-          <div class="p-6 bg-gray-400/5 sm:p-10">
-            <img class="object-contain w-full max-h-12"
-              src="https://tailwindcss.com/plus-assets/img/logos/158x48/tuple-logo-gray-900.svg" alt="Tuple" width="158"
-              height="48">
-          </div>
-          <div class="p-6 bg-gray-400/5 sm:p-10">
-            <img class="object-contain w-full max-h-12"
-              src="https://tailwindcss.com/plus-assets/img/logos/158x48/laravel-logo-gray-900.svg" alt="Laravel"
-              width="158" height="48">
-          </div>
-          <div class="p-6 bg-gray-400/5 sm:p-10">
-            <img class="object-contain w-full max-h-12"
-              src="https://tailwindcss.com/plus-assets/img/logos/158x48/savvycal-logo-gray-900.svg" alt="SavvyCal"
-              width="158" height="48">
-          </div>
-          <div class="p-6 bg-gray-400/5 sm:p-10">
-            <img class="object-contain w-full max-h-12"
-              src="https://tailwindcss.com/plus-assets/img/logos/158x48/statamic-logo-gray-900.svg" alt="Statamic"
-              width="158" height="48">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <section class="bg-white dark:bg-gray-900">
-  <h2
-    class="max-w-screen-xl px-4 pt-8 mx-auto mb-4 text-4xl font-extrabold tracking-tight text-gray-900 xl:gap-16 md:grid md:grid-cols-2 sm:py-8 lg:px-6 dark:text-white">
-    Soluciones legales en cualquier momento de tu vida
-  </h2>
-  <div class="items-center max-w-screen-xl gap-8 px-4 py-8 mx-auto xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
+  <div class="items-center max-w-screen-xl gap-8 px-4 py-8 mx-auto lg:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
     <img class="w-full dark:hidden"
       src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup.svg" alt="dashboard image">
     <img class="hidden w-full dark:block"

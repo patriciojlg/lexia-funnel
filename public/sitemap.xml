@@ -6,7 +6,11 @@
   </url><url>
     <loc>http://localhost:1313/servicios/pension-alimentos/</loc>
   </url><url>
+    <loc>http://localhost:1313/servicios/divorcio/</loc>
+  </url><url>
     <loc>http://localhost:1313/</loc>
+  </url><url>
+    <loc>http://localhost:1313/nosotros/</loc>
   </url><url>
     <loc>http://localhost:1313/servicios/</loc>
   </url><url>

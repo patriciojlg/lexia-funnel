@@ -1,191 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" class="scroll-smooth">
 
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
     <title>Demanda tu pensión de alimentos en minutos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="/css/styles.min.96d3d1b0426bfda850892fb2fee21a1811934601a07058314625a679e9a5ee30.css">
     <script src="https://unpkg.com/flowbite@latest/dist/flowbite.min.js"></script>
+    <style>
+         
+        :root {
+            --font-heading: 'DM Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            --font-body: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            letter-spacing: -0.025em;
+            line-height: 1.2;
+        }
+
+        .font-heading {
+            font-family: var(--font-heading);
+        }
+
+        .font-body {
+            font-family: var(--font-body);
+        }
+    </style>
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-gray-100 text-gray-900 dark:text-white">
     <header>
         <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
-            <div class="flex flex-wrap items-center justify-between mx-auto">
-                <a href="https://flowbite.com" class="flex items-center">
-                    <img src="https://flowbite.com/docs/images/logo.svg" class="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
-                    <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+            <div class="flex flex-wrap items-center justify-between mx-auto max-w-screen-xl">
+                <a href="/" class="flex items-center">
+                    <img src="/images/logo.svg" class="h-8 mr-3" alt="Lexia Logo" />
+                    <span class="self-center text-2xl font-semibold tracking-tight whitespace-nowrap dark:text-white font-heading">Lexia</span>
                 </a>
                 <div class="flex items-center lg:order-2">
-                    <a href="#"
-                        class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 lg:px-5 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">Login</a>
-                    <a href="#"
-                        class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 py-2 lg:px-5 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">Sign
-                        up</a>
-                    <button data-collapse-toggle="mobile-menu-2" type="button"
+                    <a href="/iniciar"
+                        class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 lg:px-5 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">Iniciar Sesión</a>
+                    <a href="/registro"
+                        class="text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 lg:px-6 lg:py-3 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">Comenzar Gratis</a>
+                    <button data-collapse-toggle="mobile-menu" type="button"
                         class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                        aria-controls="mobile-menu-2" aria-expanded="false">
-                        <span class="sr-only">Open main menu</span>
+                        aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Abrir menú principal</span>
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
                                 clip-rule="evenodd"></path>
                         </svg>
-                        <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                clip-rule="evenodd"></path>
-                        </svg>
                     </button>
                 </div>
-                <div class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
+                <div class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu">
                     <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
                         <li>
-                            <a href="#"
-                                class="block py-2 pl-3 pr-4 border-b border-gray-100 text-primary-600 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-600 lg:p-0 dark:text-primary-500 lg:dark:hover:text-primary-500 dark:hover:bg-gray-700 dark:hover:text-primary-500 lg:dark:hover:bg-transparent dark:border-gray-700"
-                                aria-current="page">Home</a>
+                            <a href="/"
+                                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-600 lg:p-0 dark:text-gray-400 lg:dark:hover:text-primary-500 dark:hover:bg-gray-700 dark:hover:text-primary-500 lg:dark:hover:bg-transparent dark:border-gray-700">Inicio</a>
                         </li>
                         <li>
-                            <a href="#"
-                                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-600 lg:p-0 dark:text-gray-400 lg:dark:hover:text-primary-500 dark:hover:bg-gray-700 dark:hover:text-primary-500 lg:dark:hover:bg-transparent dark:border-gray-700">Features</a>
+                            <a href="/servicios"
+                                class="block py-2 pl-3 pr-4 text-primary-600 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-600 lg:p-0 dark:text-gray-400 lg:dark:hover:text-primary-500 dark:hover:bg-gray-700 dark:hover:text-primary-500 lg:dark:hover:bg-transparent dark:border-gray-700">Servicios</a>
                         </li>
                         <li>
-                            <a href="#"
-                                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-600 lg:p-0 dark:text-gray-400 lg:dark:hover:text-primary-500 dark:hover:bg-gray-700 dark:hover:text-primary-500 lg:dark:hover:bg-transparent dark:border-gray-700">Marketplace</a>
+                            <a href="/nosotros"
+                                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-600 lg:p-0 dark:text-gray-400 lg:dark:hover:text-primary-500 dark:hover:bg-gray-700 dark:hover:text-primary-500 lg:dark:hover:bg-transparent dark:border-gray-700">Nosotros</a>
                         </li>
                         <li>
-                            <button type="button" id="dropdown-button" data-dropdown-toggle="dropdown"
-                                class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 border-b border-gray-100 lg:w-auto hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-600 lg:p-0 dark:text-gray-400 lg:dark:hover:text-primary-500 dark:hover:bg-gray-700 dark:hover:text-primary-500 lg:dark:hover:bg-transparent dark:border-gray-700">Company
-                                <svg class="w-5 h-5 ml-1 lg:w-4 lg:h-4" fill="currentColor" viewBox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                        clip-rule="evenodd"></path>
-                                </svg></button>
-                            <div id="dropdown"
-                                class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700">
-                                <ul class="py-1 text-sm font-light text-gray-500 dark:text-gray-400"
-                                    aria-labelledby="dropdown-button">
-                                    <li>
-                                        <a href="#"
-                                            class="flex items-center w-full px-4 py-2 hover:text-primary-600 dark:hover:text-primary-500"><svg
-                                                class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd"
-                                                    d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z"
-                                                    clip-rule="evenodd"></path>
-                                            </svg>Audience</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"
-                                            class="flex items-center w-full px-4 py-2 hover:text-primary-600 dark:hover:text-primary-500"><svg
-                                                class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V9.236a1 1 0 00-1.447-.894l-4 2a1 1 0 00-.553.894V17zM15.211 6.276a1 1 0 000-1.788l-4.764-2.382a1 1 0 00-.894 0L4.789 4.488a1 1 0 000 1.788l4.764 2.382a1 1 0 00.894 0l4.764-2.382zM4.447 8.342A1 1 0 003 9.236V15a1 1 0 00.553.894l4 2A1 1 0 009 17v-5.764a1 1 0 00-.553-.894l-4-2z">
-                                                </path>
-                                            </svg>Marketing Automation</a>
-                                    </li>
-                                    <li>
-                                        <button id="submenu-dropdown-button" data-dropdown-toggle="submenu-dropdown"
-                                            data-dropdown-placement="right-end" type="button"
-                                            class="flex items-center justify-between w-full px-4 py-2 hover:text-primary-600 dark:hover:text-primary-500">
-                                            <span class="flex items-center">
-                                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd"
-                                                        d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
-                                                        clip-rule="evenodd"></path>
-                                                </svg>Creative Tools
-                                            </span>
-                                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd"
-                                                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                                                    clip-rule="evenodd"></path>
-                                            </svg>
-                                        </button>
-                                        <div id="submenu-dropdown"
-                                            class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700">
-                                            <ul class="py-1 text-sm font-light text-gray-500 dark:text-gray-400"
-                                                aria-labelledby="dropdown-button">
-                                                <li>
-                                                    <a href="#"
-                                                        class="flex items-center w-full px-4 py-2 hover:text-primary-600 dark:hover:text-primary-500">Marketing
-                                                        CRM</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"
-                                                        class="flex items-center w-full px-4 py-2 hover:text-primary-600 dark:hover:text-primary-500">Sign
-                                                        up forms</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"
-                                                        class="flex items-center w-full px-4 py-2 hover:text-primary-600 dark:hover:text-primary-500">Segmentation</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"
-                                                        class="flex items-center w-full px-4 py-2 hover:text-primary-600 dark:hover:text-primary-500">Dynamic
-                                                        content</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"
-                                                        class="flex items-center w-full px-4 py-2 hover:text-primary-600 dark:hover:text-primary-500">A/B
-                                                        Testing</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"
-                                                        class="flex items-center w-full px-4 py-2 hover:text-primary-600 dark:hover:text-primary-500">Behavioural
-                                                        targeting</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"
-                                                        class="flex items-center w-full px-4 py-2 hover:text-primary-600 dark:hover:text-primary-500">Integrations</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <a href="#"
-                                            class="flex items-center w-full px-4 py-2 hover:text-primary-600 dark:hover:text-primary-500"><svg
-                                                class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd"
-                                                    d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z"
-                                                    clip-rule="evenodd"></path>
-                                            </svg>Insights & Analytics</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"
-                                            class="flex items-center w-full px-4 py-2 hover:text-primary-600 dark:hover:text-primary-500"><svg
-                                                class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path>
-                                                <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
-                                            </svg>Demographics</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"
-                                            class="flex items-center w-full px-4 py-2 hover:text-primary-600 dark:hover:text-primary-500"><svg
-                                                class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z">
-                                                </path>
-                                            </svg>Contact Profiles</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-600 lg:p-0 dark:text-gray-400 lg:dark:hover:text-primary-500 dark:hover:bg-gray-700 dark:hover:text-primary-500 lg:dark:hover:bg-transparent dark:border-gray-700">Team</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-600 lg:p-0 dark:text-gray-400 lg:dark:hover:text-primary-500 dark:hover:bg-gray-700 dark:hover:text-primary-500 lg:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+                            <a href="/precios"
+                                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-600 lg:p-0 dark:text-gray-400 lg:dark:hover:text-primary-500 dark:hover:bg-gray-700 dark:hover:text-primary-500 lg:dark:hover:bg-transparent dark:border-gray-700">Precios</a>
                         </li>
                     </ul>
                 </div>
@@ -199,104 +95,32 @@
         <div class="mr-auto place-self-center lg:col-span-7">
             <h1
                 class="max-w-2xl mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl dark:text-white">
-                Payments tool for software companies</h1>
-            <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">From
-                checkout to global sales tax compliance, companies around the world use Flowbite to simplify their
-                payment stack.</p>
-            <a href="#"
-                class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
-                Get started
-                <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                        d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                        clip-rule="evenodd"></path>
-                </svg>
-            </a>
-            <a href="#"
-                class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
-                Speak to Sales
-            </a>
+                Demanda tu pensión de alimentos en minutos</h1>
+            <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
+                Obtén el monto que corresponde por ley. Sin trámites eternos ni visitas al tribunal.</p>
+            <div class="space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
+                <a href="#"
+                    class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
+                    Comenzar demanda
+                </a>
+                <a href="#how-it-works"
+                    class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+                    Ver más
+                </a>
+            </div>
         </div>
         <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-            <img src="" alt="mockup">
+            <img src="/images/hero-mujer-tablet.png" alt="mockup">
         </div>
     </div>
 </section>
 
 <section class="bg-white dark:bg-gray-900">
     <div class="max-w-screen-xl px-4 py-8 mx-auto text-center sm:py-16 lg:px-6">
-        <h2 class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">The most trusted
-            cryptocurrency platform</h2>
-        <p class="text-gray-500 sm:text-xl dark:text-gray-400">Here are a few reasons why you should choose Flowbite</p>
+
         <div class="mt-8 space-y-8 lg:mt-12 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
-            <div>
-                <svg class="w-12 h-12 mx-auto mb-4 text-primary-600 dark:text-primary-500" fill="currentColor"
-                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                        d="M6.625 2.655A9 9 0 0119 11a1 1 0 11-2 0 7 7 0 00-9.625-6.492 1 1 0 11-.75-1.853zM4.662 4.959A1 1 0 014.75 6.37 6.97 6.97 0 003 11a1 1 0 11-2 0 8.97 8.97 0 012.25-5.953 1 1 0 011.412-.088z"
-                        clip-rule="evenodd"></path>
-                    <path fill-rule="evenodd"
-                        d="M5 11a5 5 0 1110 0 1 1 0 11-2 0 3 3 0 10-6 0c0 1.677-.345 3.276-.968 4.729a1 1 0 11-1.838-.789A9.964 9.964 0 005 11zm8.921 2.012a1 1 0 01.831 1.145 19.86 19.86 0 01-.545 2.436 1 1 0 11-1.92-.558c.207-.713.371-1.445.49-2.192a1 1 0 011.144-.83z"
-                        clip-rule="evenodd"></path>
-                    <path fill-rule="evenodd"
-                        d="M10 10a1 1 0 011 1c0 2.236-.46 4.368-1.29 6.304a1 1 0 01-1.838-.789A13.952 13.952 0 009 11a1 1 0 011-1z"
-                        clip-rule="evenodd"></path>
-                </svg>
-                <h3 class="mb-2 text-xl font-bold dark:text-white">Secure storage</h3>
-                <p class="mb-4 text-gray-500 dark:text-gray-400">We store the vast majority of the digital assets in
-                    secure offline storage.</p>
-                <a href="#"
-                    class="inline-flex items-center text-sm font-medium text-primary-600 hover:text-primary-700 dark:text-primary-500 dark:hover:text-primary-400">
-                    Learn how to keep your funds safe <svg class="w-5 h-5 ml-1" fill="currentColor" viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                            clip-rule="evenodd"></path>
-                    </svg>
-                </a>
-            </div>
-            <div>
-                <svg class="w-12 h-12 mx-auto mb-4 text-primary-600 dark:text-primary-500" fill="currentColor"
-                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
-                    <path fill-rule="evenodd"
-                        d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z"
-                        clip-rule="evenodd"></path>
-                </svg>
-                <h3 class="mb-2 text-xl font-bold dark:text-white">Insurance</h3>
-                <p class="mb-4 text-gray-500 dark:text-gray-400">Flowbite maintains crypto insurance and all USD cash
-                    balances are covered.</p>
-                <a href="#"
-                    class="inline-flex items-center text-sm font-medium text-primary-600 hover:text-primary-700 dark:text-primary-500 dark:hover:text-primary-400">
-                    Learn how your crypto is covered <svg class="w-5 h-5 ml-1" fill="currentColor" viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                            clip-rule="evenodd"></path>
-                    </svg>
-                </a>
-            </div>
-            <div>
-                <svg class="w-12 h-12 mx-auto mb-4 text-primary-600 dark:text-primary-500" fill="currentColor"
-                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                        d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                        clip-rule="evenodd"></path>
-                </svg>
-                <h3 class="mb-2 text-xl font-bold dark:text-white">Best practices</h3>
-                <p class="mb-4 text-gray-500 dark:text-gray-400">Flowbite marketplace supports a variety of the most
-                    popular digital currencies.</p>
-                <a href="#"
-                    class="inline-flex items-center text-sm font-medium text-primary-600 hover:text-primary-700 dark:text-primary-500 dark:hover:text-primary-400">
-                    How to implement best practices <svg class="w-5 h-5 ml-1" fill="currentColor" viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                            clip-rule="evenodd"></path>
-                    </svg>
-                </a>
-            </div>
+            
+
         </div>
     </div>
 </section>
@@ -413,18 +237,19 @@
     </div>
 </section>
 
-<section class="bg-white dark:bg-gray-900">
+<section class="bg-white dark:bg-gray-900" id="how-it-works">
+
     <div class="max-w-screen-xl px-4 py-8 mx-auto space-y-12 lg:space-y-20 sm:py-16 lg:px-6">
+        <h2 class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">Cómo funciona</h2>
+        
         
         <div class="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
             <div class="text-gray-500 sm:text-lg dark:text-gray-400">
-                <h2 class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">Work with tools
-                    you already use</h2>
-                <p class="mb-8 font-light lg:text-xl">Deliver great service experiences fast - without the complexity of
-                    traditional ITSM solutions.Accelerate critical development work, eliminate toil, and deploy changes
-                    with ease.</p>
+                <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">Ingresa ruts</h2>
+                <p class="mb-8 font-light lg:text-xl">Ingresa solo el rut de tu hija o hijo, nuestras automatizaciones se encargaran de la obtención de los datos de madre y padre</p>
                 
                 <ul role="list" class="pt-8 space-y-5 border-t border-gray-200 my-7 dark:border-gray-700">
+                    
                     <li class="flex space-x-3">
                         
                         <svg class="flex-shrink-0 w-5 h-5 text-primary-600 dark:text-primary-500" fill="currentColor"
@@ -433,9 +258,9 @@
                                 d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                 clip-rule="evenodd"></path>
                         </svg>
-                        <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Continuous
-                            integration and deployment</span>
+                        <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">dato</span>
                     </li>
+                    
                     <li class="flex space-x-3">
                         
                         <svg class="flex-shrink-0 w-5 h-5 text-primary-600 dark:text-primary-500" fill="currentColor"
@@ -444,9 +269,9 @@
                                 d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                 clip-rule="evenodd"></path>
                         </svg>
-                        <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Development
-                            workflow</span>
+                        <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">dato2</span>
                     </li>
+                    
                     <li class="flex space-x-3">
                         
                         <svg class="flex-shrink-0 w-5 h-5 text-primary-600 dark:text-primary-500" fill="currentColor"
@@ -455,30 +280,22 @@
                                 d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                 clip-rule="evenodd"></path>
                         </svg>
-                        <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Knowledge
-                            management</span>
+                        <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">dato3</span>
                     </li>
+                    
                 </ul>
-                <p class="mb-8 font-light lg:text-xl">Deliver great service experiences fast - without the complexity of
-                    traditional ITSM solutions.</p>
+
             </div>
-            <img class="hidden w-full mb-4 rounded-lg lg:mb-0 lg:flex"
-                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/features/feature-office-1.png"
-                alt="office feature image">
+            <img class="hidden w-full mb-4 rounded-lg lg:mb-0 lg:flex" src="/images/rndpa_howItWork_firstStep.png" alt="office feature image">
         </div>
         
         <div class="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
-            <img class="hidden w-full mb-4 rounded-lg lg:mb-0 lg:flex"
-                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/features/feature-office-2.png"
-                alt="office feature image 2">
             <div class="text-gray-500 sm:text-lg dark:text-gray-400">
-                <h2 class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">We invest in the
-                    world’s potential</h2>
-                <p class="mb-8 font-light lg:text-xl">Deliver great service experiences fast - without the complexity of
-                    traditional ITSM solutions.Accelerate critical development work, eliminate toil, and deploy changes
-                    with ease.</p>
+                <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">Sube fotos o documentos</h2>
+                <p class="mb-8 font-light lg:text-xl">Sube todo tipo de documentos que den cuenta de tus gastos sobre tu hija o hijo. Recibos del colegio, cuentas de luz, agua, teléfono, internet, Gastos médicos, etc.</p>
                 
                 <ul role="list" class="pt-8 space-y-5 border-t border-gray-200 my-7 dark:border-gray-700">
+                    
                     <li class="flex space-x-3">
                         
                         <svg class="flex-shrink-0 w-5 h-5 text-primary-600 dark:text-primary-500" fill="currentColor"
@@ -487,9 +304,9 @@
                                 d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                 clip-rule="evenodd"></path>
                         </svg>
-                        <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Dynamic reports
-                            and dashboards</span>
+                        <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Los documentos serán leidos y comprendidos por nuestra IA</span>
                     </li>
+                    
                     <li class="flex space-x-3">
                         
                         <svg class="flex-shrink-0 w-5 h-5 text-primary-600 dark:text-primary-500" fill="currentColor"
@@ -498,9 +315,9 @@
                                 d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                 clip-rule="evenodd"></path>
                         </svg>
-                        <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Templates for
-                            everyone</span>
+                        <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Todo tipo de documento, foto u otra forma de registro, irá completando los datos de tu caso</span>
                     </li>
+                    
                     <li class="flex space-x-3">
                         
                         <svg class="flex-shrink-0 w-5 h-5 text-primary-600 dark:text-primary-500" fill="currentColor"
@@ -509,54 +326,35 @@
                                 d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                 clip-rule="evenodd"></path>
                         </svg>
-                        <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Development
-                            workflow</span>
+                        <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Te daremos feedback de inmediato sobre como la subida de documentos ayuda en tu caso</span>
                     </li>
-                    <li class="flex space-x-3">
-                        
-                        <svg class="flex-shrink-0 w-5 h-5 text-primary-600 dark:text-primary-500" fill="currentColor"
-                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Limitless
-                            business automation</span>
-                    </li>
-                    <li class="flex space-x-3">
-                        
-                        <svg class="flex-shrink-0 w-5 h-5 text-primary-600 dark:text-primary-500" fill="currentColor"
-                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Knowledge
-                            management</span>
-                    </li>
+                    
                 </ul>
-                <p class="font-light lg:text-xl">Deliver great service experiences fast - without the complexity of
-                    traditional ITSM solutions.</p>
+
             </div>
+            <img class="hidden w-full mb-4 rounded-lg lg:mb-0 lg:flex" src="/images/how_it_work_step2.png" alt="office feature image">
         </div>
+        
     </div>
 </section>
 
 <section class="bg-white dark:bg-gray-900">
     <div class="max-w-screen-xl px-4 py-8 mx-auto sm:py-16 lg:px-6 ">
-        <h2
-            class="mb-6 text-3xl font-extrabold tracking-tight text-center text-gray-900 lg:mb-8 lg:text-4xl dark:text-white">
-            Frequently asked questions</h2>
+        <h2 class="mb-6 text-3xl font-extrabold tracking-tight text-center text-gray-900 lg:mb-8 lg:text-4xl dark:text-white">
+            Preguntas Frecuentes
+        </h2>
         <div class="max-w-screen-md mx-auto">
             <div id="accordion-flush" data-accordion="collapse"
                 data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
                 data-inactive-classes="text-gray-500 dark:text-gray-400">
+                
                 <h2 id="accordion-flush-heading-1">
                     <button type="button"
                         class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-900 bg-white border-b border-gray-200 dark:border-gray-700 dark:bg-gray-900 dark:text-white"
-                        data-accordion-target="#accordion-flush-body-1" aria-expanded="true"
+                        data-accordion-target="#accordion-flush-body-1" 
+                        aria-expanded="true"
                         aria-controls="accordion-flush-body-1">
-                        <span>Can I use Flowbite in open-source projects?</span>
+                        <span>¿Cuánto dinero puedo solicitar por pensión de alimentos?</span>
                         <svg data-accordion-icon="" class="w-6 h-6 rotate-180 shrink-0" fill="currentColor"
                             viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -565,104 +363,123 @@
                         </svg>
                     </button>
                 </h2>
-                <div id="accordion-flush-body-1" class="" aria-labelledby="accordion-flush-heading-1">
+                <div id="accordion-flush-body-1" class="" 
+                    aria-labelledby="accordion-flush-heading-1">
                     <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is an open-source library of
-                            interactive components built on top of Tailwind CSS including buttons, dropdowns, modals,
-                            navbars, and more.</p>
-                        <p class="text-gray-500 dark:text-gray-400">Check out this guide to learn how to <a href="#"
-                                class="text-primary-600 dark:text-primary-500 hover:underline">get started</a> and start
-                            developing websites even faster with components on top of Tailwind CSS.</p>
+                        <p class="mb-2 text-gray-500 dark:text-gray-400">El monto de la pensión de alimentos se determina según los ingresos del alimentante (quien debe pagar) y las necesidades del alimentario (hijo/a). Por ley, el monto mínimo es el 40% del ingreso mínimo mensual por cada hijo. Nuestra IA analiza tu caso específico y sugiere un monto basado en jurisprudencia y factores como gastos escolares, de salud y necesidades básicas.</p>
                     </div>
                 </div>
+                
                 <h2 id="accordion-flush-heading-2">
                     <button type="button"
-                        class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
-                        data-accordion-target="#accordion-flush-body-2" aria-expanded="false"
+                        class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:bg-gray-900 dark:text-white"
+                        data-accordion-target="#accordion-flush-body-2" 
+                        aria-expanded="false"
                         aria-controls="accordion-flush-body-2">
-                        <span>Is there a Figma file available?</span>
-                        <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
+                        <span>¿Qué pasa si el padre/madre no quiere pagar la pensión?</span>
+                        <svg data-accordion-icon="" class="w-6 h-6  shrink-0" fill="currentColor"
+                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                                 clip-rule="evenodd"></path>
                         </svg>
                     </button>
                 </h2>
-                <div id="accordion-flush-body-2" class="hidden" aria-labelledby="accordion-flush-heading-2">
+                <div id="accordion-flush-body-2" class="hidden" 
+                    aria-labelledby="accordion-flush-heading-2">
                     <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and designed
-                            using the Figma software so everything you see in the library has a design equivalent in our
-                            Figma file.</p>
-                        <p class="text-gray-500 dark:text-gray-400">Check out the <a href="#"
-                                class="text-primary-600 dark:text-primary-500 hover:underline">Figma design system</a>
-                            based on the utility classes from Tailwind CSS and components from Flowbite.</p>
+                        <p class="mb-2 text-gray-500 dark:text-gray-400">Si existe una resolución judicial y no se cumple el pago, se pueden tomar medidas legales como: retención del 50% de sus remuneraciones, retención de la devolución de impuestos, arraigo nacional (prohibición de salir del país), o incluso arresto nocturno. Nuestro sistema automatiza estas solicitudes de apremio para hacerlas efectivas rápidamente.</p>
                     </div>
                 </div>
+                
                 <h2 id="accordion-flush-heading-3">
                     <button type="button"
-                        class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
-                        data-accordion-target="#accordion-flush-body-3" aria-expanded="false"
+                        class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:bg-gray-900 dark:text-white"
+                        data-accordion-target="#accordion-flush-body-3" 
+                        aria-expanded="false"
                         aria-controls="accordion-flush-body-3">
-                        <span>What are the differences between Flowbite and Tailwind UI?</span>
-                        <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
+                        <span>¿Necesito tener todos los datos del demandado para iniciar el proceso?</span>
+                        <svg data-accordion-icon="" class="w-6 h-6  shrink-0" fill="currentColor"
+                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                                 clip-rule="evenodd"></path>
                         </svg>
                     </button>
                 </h2>
-                <div id="accordion-flush-body-3" class="hidden" aria-labelledby="accordion-flush-heading-3">
+                <div id="accordion-flush-body-3" class="hidden" 
+                    aria-labelledby="accordion-flush-heading-3">
                     <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">The main difference is that the core components
-                            from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product.
-                            Another difference is that Flowbite relies on smaller and standalone components, whereas
-                            Tailwind UI offers sections of pages.</p>
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both
-                            Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you
-                            from using the best of two worlds.</p>
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
-                        <ul class="pl-5 text-gray-500 list-disc dark:text-gray-400">
-                            <li><a href="#" class="text-primary-600 dark:text-primary-500 hover:underline">Flowbite
-                                    Pro</a></li>
-                            <li><a href="#" class="text-primary-600 dark:text-primary-500 hover:underline">Tailwind
-                                    UI</a></li>
-                        </ul>
+                        <p class="mb-2 text-gray-500 dark:text-gray-400">No, solo necesitas el RUT. Nuestro sistema se conecta con diversas bases de datos para obtener la información necesaria como domicilio, trabajo y capacidad económica del demandado. Esto facilita enormemente el proceso para ti.</p>
                     </div>
                 </div>
+                
                 <h2 id="accordion-flush-heading-4">
                     <button type="button"
-                        class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
-                        data-accordion-target="#accordion-flush-body-4" aria-expanded="false"
+                        class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:bg-gray-900 dark:text-white"
+                        data-accordion-target="#accordion-flush-body-4" 
+                        aria-expanded="false"
                         aria-controls="accordion-flush-body-4">
-                        <span>What about browser support?</span>
-                        <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
+                        <span>¿Cuánto tiempo toma obtener la pensión de alimentos?</span>
+                        <svg data-accordion-icon="" class="w-6 h-6  shrink-0" fill="currentColor"
+                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                                 clip-rule="evenodd"></path>
                         </svg>
                     </button>
                 </h2>
-                <div id="accordion-flush-body-4" class="hidden" aria-labelledby="accordion-flush-heading-4">
+                <div id="accordion-flush-body-4" class="hidden" 
+                    aria-labelledby="accordion-flush-heading-4">
                     <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">The main difference is that the core components
-                            from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product.
-                            Another difference is that Flowbite relies on smaller and standalone components, whereas
-                            Tailwind UI offers sections of pages.</p>
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both
-                            Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you
-                            from using the best of two worlds.</p>
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
-                        <ul class="pl-5 text-gray-500 list-disc dark:text-gray-400">
-                            <li><a href="#" class="text-primary-600 dark:text-primary-500 hover:underline">Flowbite
-                                    Pro</a></li>
-                            <li><a href="#" class="text-primary-600 dark:text-primary-500 hover:underline">Tailwind
-                                    UI</a></li>
-                        </ul>
+                        <p class="mb-2 text-gray-500 dark:text-gray-400">En promedio, desde que se presenta la demanda hasta obtener la primera pensión, el proceso puede tomar entre 2 a 3 meses. Sin embargo, en la primera audiencia el juez puede fijar una pensión provisoria. Con Lexia, aceleramos la preparación y presentación de tu demanda, que tradicionalmente puede tomar semanas, a solo minutos.</p>
                     </div>
                 </div>
+                
+                <h2 id="accordion-flush-heading-5">
+                    <button type="button"
+                        class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:bg-gray-900 dark:text-white"
+                        data-accordion-target="#accordion-flush-body-5" 
+                        aria-expanded="false"
+                        aria-controls="accordion-flush-body-5">
+                        <span>¿Qué documentos necesito para demandar?</span>
+                        <svg data-accordion-icon="" class="w-6 h-6  shrink-0" fill="currentColor"
+                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </h2>
+                <div id="accordion-flush-body-5" class="hidden" 
+                    aria-labelledby="accordion-flush-heading-5">
+                    <div class="py-5 border-b border-gray-200 dark:border-gray-700">
+                        <p class="mb-2 text-gray-500 dark:text-gray-400">Los documentos básicos son: tu carnet de identidad, certificado de nacimiento del hijo/a, y comprobantes de gastos (escolares, salud, vivienda, etc.). Nuestra plataforma te guía paso a paso y puedes subir fotos de los documentos directamente desde tu celular. La IA los procesa automáticamente para incluirlos en tu demanda.</p>
+                    </div>
+                </div>
+                
+                <h2 id="accordion-flush-heading-6">
+                    <button type="button"
+                        class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:bg-gray-900 dark:text-white"
+                        data-accordion-target="#accordion-flush-body-6" 
+                        aria-expanded="false"
+                        aria-controls="accordion-flush-body-6">
+                        <span>¿Qué pasa si no sé dónde vive o trabaja el padre/madre?</span>
+                        <svg data-accordion-icon="" class="w-6 h-6  shrink-0" fill="currentColor"
+                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </h2>
+                <div id="accordion-flush-body-6" class="hidden" 
+                    aria-labelledby="accordion-flush-heading-6">
+                    <div class="py-5 border-b border-gray-200 dark:border-gray-700">
+                        <p class="mb-2 text-gray-500 dark:text-gray-400">No te preocupes. Con solo el RUT, nuestro sistema puede realizar las búsquedas necesarias en registros públicos y bases de datos oficiales para ubicar al demandado. En casos donde la persona no pueda ser ubicada, existen procedimientos legales especiales que nuestro sistema puede gestionar.</p>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </div>
@@ -670,12 +487,8 @@
 
 <section class="bg-white dark:bg-gray-900">
     <div class="items-center max-w-screen-xl gap-8 px-4 py-8 mx-auto xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
-        <img class="w-full dark:hidden"
-            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup.svg"
-            alt="dashboard image">
-        <img class="hidden w-full dark:block"
-            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup-dark.svg"
-            alt="dashboard image">
+        <img class="w-full dark:hidden" src="/images/rndpa_no_estas_sola.png" alt="dashboard image">
+        <img class="hidden w-full dark:block" src="/images/rndpa_no_estas_sola.png" alt="dashboard image">
         <div class="mt-4 md:mt-0">
             <h2 class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">No estás sola, exige
                 lo que te corresponde.</h2>
@@ -899,16 +712,7 @@
                         <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path fill-rule="evenodd"
-                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path fill-rule="evenodd"
-                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z"
+                                    d="M12 2C6.477 2 2 6.484 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z"
                                     clip-rule="evenodd" />
                             </svg>
                         </a>

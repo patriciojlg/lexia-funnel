@@ -1,0 +1,13 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Hugo Server",
+            "type": "shell",
+            "command": "hugo server --buildDrafts --buildFuture --disableFastRender",
+            "group": "build",
+            "problemMatcher": [],
+            "isBackground": true
+        }
+    ]
+}

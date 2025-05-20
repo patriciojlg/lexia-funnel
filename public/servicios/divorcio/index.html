@@ -1,42 +1,31 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
-    <title>{{ .Title }}</title>
+    <title>Divorcio Express con IA</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    {{ $styles := resources.Get "css/styles.css" | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/css/styles.min.96d3d1b0426bfda850892fb2fee21a1811934601a07058314625a679e9a5ee30.css">
     <script src="https://unpkg.com/flowbite@latest/dist/flowbite.min.js"></script>
     <style>
-        /* Base typography styles */
+         
         :root {
-            --font-heading: 'DM Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            --font-body: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            --font-primary: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
         }
         
         body {
-            font-family: var(--font-body);
+            font-family: var(--font-primary);
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-            line-height: 1.6;
         }
 
         h1, h2, h3, h4, h5, h6 {
-            font-family: var(--font-heading);
+            font-family: var(--font-primary);
             font-weight: 600;
             letter-spacing: -0.025em;
-            line-height: 1.2;
-        }
-
-        .font-heading {
-            font-family: var(--font-heading);
-        }
-
-        .font-body {
-            font-family: var(--font-body);
         }
     </style>
 </head>
@@ -47,7 +36,7 @@
             <div class="flex flex-wrap items-center justify-between mx-auto max-w-screen-xl">
                 <a href="/" class="flex items-center">
                     <img src="/images/logo.svg" class="h-8 mr-3" alt="Lexia Logo" />
-                    <span class="self-center text-2xl font-semibold tracking-tight whitespace-nowrap dark:text-white font-heading">Lexia</span>
+                    <span class="self-center text-2xl font-semibold tracking-tight whitespace-nowrap dark:text-white">Lexia</span>
                 </a>
                 <div class="flex items-center lg:order-2">
                     <a href="/iniciar"
@@ -69,26 +58,314 @@
                     <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
                         <li>
                             <a href="/"
-                                class="block py-2 pl-3 pr-4 {{ if .IsHome }}text-primary-600{{ else }}text-gray-700{{ end }} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-600 lg:p-0 dark:text-gray-400 lg:dark:hover:text-primary-500 dark:hover:bg-gray-700 dark:hover:text-primary-500 lg:dark:hover:bg-transparent dark:border-gray-700">Inicio</a>
+                                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-600 lg:p-0 dark:text-gray-400 lg:dark:hover:text-primary-500 dark:hover:bg-gray-700 dark:hover:text-primary-500 lg:dark:hover:bg-transparent dark:border-gray-700">Inicio</a>
                         </li>
                         <li>
                             <a href="/servicios"
-                                class="block py-2 pl-3 pr-4 {{ if eq .Section "servicios" }}text-primary-600{{ else }}text-gray-700{{ end }} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-600 lg:p-0 dark:text-gray-400 lg:dark:hover:text-primary-500 dark:hover:bg-gray-700 dark:hover:text-primary-500 lg:dark:hover:bg-transparent dark:border-gray-700">Servicios</a>
+                                class="block py-2 pl-3 pr-4 text-primary-600 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-600 lg:p-0 dark:text-gray-400 lg:dark:hover:text-primary-500 dark:hover:bg-gray-700 dark:hover:text-primary-500 lg:dark:hover:bg-transparent dark:border-gray-700">Servicios</a>
                         </li>
                         <li>
                             <a href="/nosotros"
-                                class="block py-2 pl-3 pr-4 {{ if eq .Section "nosotros" }}text-primary-600{{ else }}text-gray-700{{ end }} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-600 lg:p-0 dark:text-gray-400 lg:dark:hover:text-primary-500 dark:hover:bg-gray-700 dark:hover:text-primary-500 lg:dark:hover:bg-transparent dark:border-gray-700">Nosotros</a>
+                                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-600 lg:p-0 dark:text-gray-400 lg:dark:hover:text-primary-500 dark:hover:bg-gray-700 dark:hover:text-primary-500 lg:dark:hover:bg-transparent dark:border-gray-700">Nosotros</a>
                         </li>
                         <li>
                             <a href="/precios"
-                                class="block py-2 pl-3 pr-4 {{ if eq .Section "precios" }}text-primary-600{{ else }}text-gray-700{{ end }} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-600 lg:p-0 dark:text-gray-400 lg:dark:hover:text-primary-500 dark:hover:bg-gray-700 dark:hover:text-primary-500 lg:dark:hover:bg-transparent dark:border-gray-700">Precios</a>
+                                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-600 lg:p-0 dark:text-gray-400 lg:dark:hover:text-primary-500 dark:hover:bg-gray-700 dark:hover:text-primary-500 lg:dark:hover:bg-transparent dark:border-gray-700">Precios</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    {{ block "main" . }}{{ end }}
+    
+
+<section class="bg-white dark:bg-gray-900">
+    <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+        <div class="mr-auto place-self-center lg:col-span-7">
+            <h1
+                class="max-w-2xl mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl dark:text-white">
+                Divorcio Express con IA</h1>
+            <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
+                Realiza tu divorcio de mutuo acuerdo en línea, sin complicaciones y con asistencia legal profesional</p>
+            <div class="space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
+                <a href="#"
+                    class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
+                    Iniciar divorcio
+                </a>
+                <a href="#how-it-works"
+                    class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+                    Ver más
+                </a>
+            </div>
+        </div>
+        <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
+            <img src="/images/hero-divorcio.png" alt="mockup">
+        </div>
+    </div>
+</section>
+
+<section class="bg-white dark:bg-gray-900">
+    <div class="max-w-screen-xl px-4 py-8 mx-auto text-center sm:py-16 lg:px-6">
+
+        <div class="mt-8 space-y-8 lg:mt-12 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
+            
+
+        </div>
+    </div>
+</section>
+
+<section class="bg-white dark:bg-gray-900">
+    <div class="items-center max-w-screen-xl gap-16 px-4 py-8 mx-auto lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+        <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+            <h2 class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">¿El padre de tu hijo
+                no paga la pensión? </h2>
+            <p class="mb-4">"Sabemos lo difícil que puede ser enfrentar esto
+                sola. Por eso creamos Lexia: una plataforma que te permite iniciar tu demanda sin filas, sin abogados
+                caros, sin miedo."</p>
+            <p>Desde tu celular, en menos de 10 minutos. Todo 100% legal.</p>
+        </div>
+        <div class="grid grid-cols-2 gap-4 mt-8">
+            <img class="w-full rounded-lg"
+                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png"
+                alt="office content 1">
+            <img class="w-full mt-4 rounded-lg lg:mt-10"
+                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png"
+                alt="office content 2">
+        </div>
+    </div>
+</section>
+
+
+<section class="bg-white dark:bg-gray-900">
+    <div class="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
+        <div class="max-w-screen-sm mx-auto mb-8 lg:mb-16">
+            <h2 class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">Testimonials</h2>
+            <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">Explore the whole collection of
+                open-source web components and elements built with the utility classes from Tailwind</p>
+        </div>
+        <div id="testimonial-carousel" class="relative" data-carousel="slide">
+            <div class="relative max-w-screen-md mx-auto overflow-x-hidden overflow-y-visible rounded-lg h-52 sm:h-48">
+                <figure class="hidden w-full max-w-screen-md mx-auto" data-carousel-item>
+                    <blockquote>
+                        <p class="text-lg font-medium text-gray-900 sm:text-2xl dark:text-white">"Flowbite is just
+                            awesome. It contains tons of predesigned components and pages starting from login screen to
+                            complex dashboard. Perfect choice for your next SaaS application."</p>
+                    </blockquote>
+                    <figcaption class="flex items-center justify-center mt-6 space-x-3">
+                        <img class="w-6 h-6 rounded-full"
+                            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
+                            alt="profile picture">
+                        <div class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
+                            <div class="pr-3 font-medium text-gray-900 dark:text-white">Bonnie Green</div>
+                            <div class="pl-3 text-sm font-light text-gray-500 dark:text-gray-400">Web developer at
+                                Google</div>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure class="hidden w-full max-w-screen-md mx-auto" data-carousel-item>
+                    <blockquote>
+                        <p class="text-lg font-medium text-gray-900 sm:text-2xl dark:text-white">"As someone who mainly
+                            designs in the browser, I've been a casual user of Figma, but as soon as I saw and started
+                            playing with FlowBite my mind was blown and became so productive."</p>
+                    </blockquote>
+                    <figcaption class="flex items-center justify-center mt-6 space-x-3">
+                        <img class="w-6 h-6 rounded-full"
+                            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/helene-engels.png"
+                            alt="profile picture">
+                        <div class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
+                            <div class="pr-3 font-medium text-gray-900 dark:text-white">Helene Engels</div>
+                            <div class="pl-3 text-sm font-light text-gray-500 dark:text-gray-400">Creative designer at
+                                Adobe</div>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure class="hidden w-full max-w-screen-md mx-auto" data-carousel-item>
+                    <blockquote>
+                        <p class="text-lg font-medium text-gray-900 sm:text-2xl dark:text-white">"Flowbite has code in
+                            one place and I'm not joking when I say it took me a matter of minutes to copy the code,
+                            customise it and integrate within a Laravel + Vue application."</p>
+                    </blockquote>
+                    <figcaption class="flex items-center justify-center mt-6 space-x-3">
+                        <img class="w-6 h-6 rounded-full"
+                            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/neil-sims.png"
+                            alt="profile picture">
+                        <div class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
+                            <div class="pr-3 font-medium text-gray-900 dark:text-white">Neil Sims</div>
+                            <div class="pl-3 text-sm font-light text-gray-500 dark:text-gray-400">CTO at Microsoft</div>
+                        </div>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="flex items-center justify-center">
+                <button type="button"
+                    class="flex items-center justify-center h-full mr-4 cursor-pointer group focus:outline-none"
+                    data-carousel-prev>
+                    <span class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="hidden">Previous</span>
+                    </span>
+                </button>
+                <button type="button"
+                    class="flex items-center justify-center h-full cursor-pointer group focus:outline-none"
+                    data-carousel-next>
+                    <span class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="hidden">Next</span>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-white dark:bg-gray-900" id="how-it-works">
+
+    <div class="max-w-screen-xl px-4 py-8 mx-auto space-y-12 lg:space-y-20 sm:py-16 lg:px-6">
+        <h2 class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">Cómo funciona</h2>
+        
+        
+        <div class="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
+            <div class="text-gray-500 sm:text-lg dark:text-gray-400">
+                <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">Completa el formulario</h2>
+                <p class="mb-8 font-light lg:text-xl">Ingresa los datos básicos y nuestra IA se encargará de preparar todos los documentos necesarios</p>
+                
+                <ul role="list" class="pt-8 space-y-5 border-t border-gray-200 my-7 dark:border-gray-700">
+                    
+                    <li class="flex space-x-3">
+                        
+                        <svg class="flex-shrink-0 w-5 h-5 text-primary-600 dark:text-primary-500" fill="currentColor"
+                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Formulario inteligente que se adapta a tu caso</span>
+                    </li>
+                    
+                    <li class="flex space-x-3">
+                        
+                        <svg class="flex-shrink-0 w-5 h-5 text-primary-600 dark:text-primary-500" fill="currentColor"
+                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Validación automática de datos</span>
+                    </li>
+                    
+                    <li class="flex space-x-3">
+                        
+                        <svg class="flex-shrink-0 w-5 h-5 text-primary-600 dark:text-primary-500" fill="currentColor"
+                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Sugerencias personalizadas</span>
+                    </li>
+                    
+                </ul>
+
+            </div>
+            <img class="hidden w-full mb-4 rounded-lg lg:mb-0 lg:flex" src="/images/divorcio_step1.png" alt="office feature image">
+        </div>
+        
+        <div class="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
+            <div class="text-gray-500 sm:text-lg dark:text-gray-400">
+                <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">Revisa y firma</h2>
+                <p class="mb-8 font-light lg:text-xl">Revisa los documentos generados y fírmalos digitalmente. Nuestros abogados verificarán todo antes de proceder</p>
+                
+                <ul role="list" class="pt-8 space-y-5 border-t border-gray-200 my-7 dark:border-gray-700">
+                    
+                    <li class="flex space-x-3">
+                        
+                        <svg class="flex-shrink-0 w-5 h-5 text-primary-600 dark:text-primary-500" fill="currentColor"
+                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Firma electrónica avanzada</span>
+                    </li>
+                    
+                    <li class="flex space-x-3">
+                        
+                        <svg class="flex-shrink-0 w-5 h-5 text-primary-600 dark:text-primary-500" fill="currentColor"
+                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Revisión legal profesional</span>
+                    </li>
+                    
+                    <li class="flex space-x-3">
+                        
+                        <svg class="flex-shrink-0 w-5 h-5 text-primary-600 dark:text-primary-500" fill="currentColor"
+                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Seguimiento en tiempo real</span>
+                    </li>
+                    
+                </ul>
+
+            </div>
+            <img class="hidden w-full mb-4 rounded-lg lg:mb-0 lg:flex" src="/images/divorcio_step2.png" alt="office feature image">
+        </div>
+        
+    </div>
+</section>
+
+<section class="bg-white dark:bg-gray-900">
+    <div class="max-w-screen-xl px-4 py-8 mx-auto sm:py-16 lg:px-6 ">
+        <h2 class="mb-6 text-3xl font-extrabold tracking-tight text-center text-gray-900 lg:mb-8 lg:text-4xl dark:text-white">
+            
+        </h2>
+        <div class="max-w-screen-md mx-auto">
+            <div id="accordion-flush" data-accordion="collapse"
+                data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
+                data-inactive-classes="text-gray-500 dark:text-gray-400">
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-white dark:bg-gray-900">
+    <div class="items-center max-w-screen-xl gap-8 px-4 py-8 mx-auto xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
+        <img class="w-full dark:hidden" src="/images/divorcio_cta.png" alt="dashboard image">
+        <img class="hidden w-full dark:block" src="/images/divorcio_cta.png" alt="dashboard image">
+        <div class="mt-4 md:mt-0">
+            <h2 class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">No estás sola, exige
+                lo que te corresponde.</h2>
+
+            <a href="#"
+                class="inline-flex items-center text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:focus:ring-primary-900">
+                Comienza ahora tu demanda
+                <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+
 
     <footer class="bg-white dark:bg-gray-800">
         <div class="w-full px-4 py-6 md:px-8 lg:px-10">
