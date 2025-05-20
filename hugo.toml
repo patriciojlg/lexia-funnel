@@ -1,3 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = '/lexia-flow/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Lexia Flow'
+relativeURLs = true
