@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Inicio on My New Hugo Site</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content in Inicio on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Demanda tu pensión de alimentos en minutos</title>
+      <link>http://localhost:1313/servicios/pension-alimentos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/servicios/pension-alimentos/</guid>
+      <description>&lt;h3 id=&#34;no-te-paga-la-pensión&#34;&gt;¿No te paga la pensión?&lt;/h3&gt;&#xA;&lt;p&gt;Con Lexia, puedes iniciar la demanda de alimentos &lt;strong&gt;en minutos&lt;/strong&gt;. Nuestra tecnología y abogados te acompañan durante todo el proceso.&lt;/p&gt;&#xA;&lt;hr&gt;</description>
+    </item>
+    <item>
+      <title>Divorcio Express con IA</title>
+      <link>http://localhost:1313/servicios/divorcio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/servicios/divorcio/</guid>
+      <description>&lt;h3 id=&#34;divorcio-simple-y-rápido&#34;&gt;Divorcio simple y rápido&lt;/h3&gt;&#xA;&lt;p&gt;Con Lexia, puedes realizar tu divorcio de mutuo acuerdo &lt;strong&gt;100% en línea&lt;/strong&gt;. Nuestra tecnología de IA y equipo legal te guían en cada paso del proceso.&lt;/p&gt;&#xA;&lt;hr&gt;</description>
+    </item>
+  </channel>
+</rss>
